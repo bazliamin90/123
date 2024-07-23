@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>123biostats</title>
+    <meta name="description" content="[Your optional description]" />
+    <link href="comic.css" rel="stylesheet" />
+	<link href="styles.css" rel="stylesheet" />
+	
+	<style>
+		table, th, td {
+			border: 1px solid teal;
+			border-collapse: collapse;
+			font-size: 12px;
+			padding: 5px;
+			}
+	</style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+      <div class="container">
+        <h1 style="font-size:3rem">123 Biostats</h1>
+        <h2>Khazanah ilmu yang mungkin tiada dalam buku</h2>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Homepage</a></li>
+		<li><a href="#calc">Sampling calculation</a></li>
+		<li><a href="#random">Random sampling</a></li>
+		<li><a href="#example">Example</a></li>
+      </ul>
+    </nav>
+
+    <main id="main" tabIndex="-1">
+	<center>
+	<a class="link-github"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"
+                ></path>
+              </svg>
+              Sampling for a multi-centered prevalence study in two hospitals</a>
+    </center>  
+	  <div class="container">
+		  
+		  <br>
+		  <a name="calc"></a>
+		  <br>
+		  <article id="contribute">
+          <section class="container">
+            <h2>Sampling calculation</h2>
+            <p></p>
+            <p></p>
+          </section>
+          <section class="container">
+            <h3>Take note:</h3>
+            <ol>
+              <li>
+                Assume:
+					<br>➊ Estimated prevalence (P): <b>10% (0.10)</b>
+					<br>➋ Margin of error (E): <b>5% (0.05)</b>
+					<br>➌ Confidence level: <b>95% (Z = 1.96)</b>
+              </li>
+			  <li>
+                Initial sample size, 𝑛 :
+					<br>= [1.96² x 0.10 x (1-0.10)] / 0.05²
+					<br>= [3.8416 x 0.10 x 0.90] / 0.0025
+					<br>= 0.345744 / 0.0025
+					<br>= 138.30 ≈ <b>139</b>
+              </li>
+            </ol>
+          </section>
+          <footer id="files">
+            <div class="container"></div>
+          </footer>
+        </article>
+		
+		<br>
+		  <a name="random"></a>
+		 <br>
+		  <article id="contribute">
+          <section class="container">
+            <h2>Random sampling</h2>
+          </section>
+		  <section class="container">
+            <h3>Take note:</h3>
+            <ol>
+              <li>
+                Obtain a <b>list of samples</b>:
+					<br>🌟 Compile a list of all samples from each hospital who meet 
+					the inclusion criteria for the study.
+              </li>
+			  <li>
+                Assign <b>random numbers</b>:
+					<br>🌟 Sort the list by the random numbers.
+					<br>🌟 Select the first 𝑛 patients from the sorted list to meet the 
+					sample size requirement.
+              </li>
+            </ol>
+          </section>
+          <footer id="files">
+            <div class="container"></div>
+          </footer>
+        </article>
+		
+		<br>
+		  <a name="example"></a>
+		 <br>
+		  <article id="contribute">
+          <section class="container">
+            <h2>Example</h2>
+          </section>
+		  <section class="container">
+            <h3>Random sampling steps:</h3>
+            <ol>
+              <li>
+                Hospital A ➠ <b>300</b> eligible contract medical officers.
+				<br>Hospital B ➠ <b>200</b> eligible contract medical officers.
+              </li>
+			  <li>
+                Assign random numbers for each sample.
+				<table>
+				<tr>
+				<th>ID</th>
+				<th>Hosp</th>
+				<th>Random No.</th>
+				</tr>
+				<tr>
+				<td>001</td>
+				<td>A</td>
+				<td>0.763</td>
+				</tr>
+				<tr>
+				<td>002</td>
+				<td>A</td>
+				<td>0.763</td>
+				</tr>
+				<tr>
+				<td>301</td>
+				<td>B</td>
+				<td>0.431</td>
+				</tr>
+				</table>
+
+              </li>
+			  <li>
+                Sort randomly.
+              </li>
+			  <li>
+                Select the first 𝑛 individuals as calculated earlier.
+              </li>
+            </ol>
+			
+			<p>---</p>
+			<p>By following these steps, you can ensure that your sample is 
+			representative of the contract MOs populations in the two hospitals.</p>
+			
+          </section>
+          <footer id="files">
+            <div class="container"></div>
+          </footer>
+        </article>
+		
+      </div>
+    </main>
+    
+    <footer class="page-footer">
+      <div class="container">
+        <ul>
+          <li>
+            <a href="https://t.me/bazliamin" class="link-twittercontact" target="_blank">@ Telegram</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+	
+	<script src="scripts.js"></script>
+	
+	<a id="backToTop" class="link-top" onclick="scrollToTop()">Top</a>
+
+	<script>
+    window.onscroll = function() {
+        var backToTopButton = document.getElementById('backToTop');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+  </body>
+</html>
