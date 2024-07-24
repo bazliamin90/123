@@ -60,9 +60,21 @@ input[type="range"]::-moz-range-thumb {
 	font-size: 14px;
 }
 
-table, th, td {
-			border: 1px solid teal;
-			border-collapse: collapse;
-			font-size: 12px;
-			padding: 5px;
-			}
+table{
+	border: 1px solid teal;
+	border-collapse: collapse;
+	font-size: 12px;
+	width: 90%;
+}
+
+th, td{
+	padding: 5px;
+}
+			
+img{
+	max-width: 70%;
+}
+
+.white{
+	color: white;
+}
